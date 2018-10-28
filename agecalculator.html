@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<!-- css begin -->
+<style>
+:root {
+  background-color: #000;
+  color: #fff;
+}
+#container {
+  text-align: center;
+  font-size: 30px;
+  font-style: normal;
+  font-family: Helvetica;
+}
+#submitYourAge {
+  display: block;
+  text-align: center;
+  margin-top: 10%;
+  font-weight: bold;
+}
+#age_container {
+  display: block;
+}
+#age {
+  border: 0px;
+  outline: none;
+  height: 50px;
+  width: 200px;
+  margin: 1%;
+  text-align: center;
+  text-align: center;
+  font-size: 30px;
+  background-color: black;
+  color: white;
+
+}
+#submitYourAgeButton_container {
+  display: block;
+}
+#submitYourAgeButton {
+  background-color: black;
+  outline: none;
+  color: white;
+  border-width: 2px;
+  border-color: white;
+  border-radius: 3%;
+  font-size: 17px;
+  padding: 10px 15px 10px 15px;
+
+
+}
+#textAge {
+  display: block;
+  margin-top: 10%;
+  font-weight: bold;
+}
+#answer {
+  display: block;
+  margin-top: 1%;
+}
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+/* remove spin box */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+</style>
+
+<!-- css end -->
+
+<!-- html begin -->
+<dev id="container">
+<head>
+  <dev id="submitYourAge"> what year were you born? </dev>
+  <dev id="age_container">
+    <input id="age" type="number" autofocus="autofocus"></input>
+  </dev>
+  <dev id="submitYourAgeButton_container">
+    <input id="submitYourAgeButton" type="button" onClick="return ageCalc();" value="click to see age"> </input>
+  </dev>
+</head>
+<body>
+  <dev id="textAge"> your age is </dev>
+  <dev id="answer" class="one"></dev>
+</body>
+</dev>
+<!-- html end -->
+
+
+
+<!-- javascript begin -->
+<script>
+function ageCalc(){
+  document.getElementById("answer").innerHTML =
+  2018 - parseInt(document.getElementById("age").value);
+  }
+</script>
+<!-- javascript end -->
+</html>
